@@ -20,7 +20,7 @@ options(gvis.plot.tag="chart")
 Where is so called "middle part of China"?
 ========================================================
 
-```{r,echo=FALSE,results='asis',tidy=FALSE}
+```{r echo=FALSE,results='asis',tidy=FALSE}
 Wuhan <- data.frame(LatLong = c("30:114"),Tip = c("This is Wuhan in Hubei Province"))
 plot(gvisMap(Wuhan, "LatLong" , "Tip", 
        options=list(showTip=TRUE, 
@@ -43,6 +43,4 @@ Hobbies
 - And, of cause, R!
 
 ***
-
-  ![Moonlight By Emil Gilels](Introduction-figure/Moonlight.jpg)
-  ![Nancy Drew](Introduction-figure/ND.jpg)
+  ![Nancy Drew](https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/ND1tsotoc.JPG/220px-ND1tsotoc.JPG)
