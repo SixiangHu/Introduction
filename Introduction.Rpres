@@ -76,9 +76,18 @@ DataSummary(cars)
 
 My R Package DataMan - `modelPlot`
 ========================================================
-```{r ,fig.width=8,fig.height=4.5,dpi=300}
+```{r ,fig.width=10,fig.height=5,dpi=300}
 glm1 <- glm(formula = mpg ~ cyl + hp, family = Gamma(log), data = mtcars, weights = wt)
+
 modelPlot(glm1,"cyl",modelType="glm",interactive=FALSE)
+```
+
+My R Package DataMan - `sankeyPlot`
+========================================================
+```{r results = 'asis',out.width=800}
+fit <- rpart(Kyphosis ~ Age + Number + Start, data = kyphosis)
+myplot <- sankeyPlot(fit)
+myplot$print('myplot1', include_assets = TRUE, cdn = TRUE)
 ```
 
 Other interesting R things 
