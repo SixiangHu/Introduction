@@ -18,6 +18,9 @@ left: 70%
 ```{r setOptions, echo=FALSE, message=FALSE}
 library(googleVis)
 options(gvis.plot.tag="chart")
+options(width = 120)
+library(DataMan)
+library(rpart)
 ```
 
 Where is so called "middle part of China"?
@@ -42,13 +45,53 @@ left: 70%
 - Programming (C, C++, WPF, R, SAS,SQL, JavaScript, etc.)
 - Classical Music (Piano)
 - PC Games (Adventure, e.g. [Nancy Drew](https://en.wikipedia.org/wiki/Nancy_Drew))
-- Travel (e.g. National trusts, Edinburgh Castel, Arudal Castel, Windsor Castel, etc.)
+- Travel (e.g. National trusts, Castels, Natural Views, etc.)
 - And, of cause, R!
 
 ***
   ![Nancy Drew](https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/ND1tsotoc.JPG/220px-ND1tsotoc.JPG)
-  
+
+Chartwell  
 ========================================================
 <div align="center">
 <img src="Introduction-figure/20150607_141205.png" width=1000 height=800>
 </div>
+
+My R Package DataMan
+========================================================
+
+- What is it?
+  This `R` package utilise `data.table` for a quick data summary and cleaning, and visualise models (`glm` and `gbm`) in an `Emblem` way.
+- Where is it? 
+  ```
+  https://github.com/SixiangHu/DataMan
+  ```
+- what is it looks like?
+
+My R Package DataMan - `DataSummary`
+========================================================
+```{r}
+DataSummary(cars)
+```
+
+My R Package DataMan - `modelPlot`
+========================================================
+```{r ,fig.width=8,fig.height=4.5,dpi=300}
+glm1 <- glm(formula = mpg ~ cyl + hp, family = Gamma(log), data = mtcars, weights = wt)
+modelPlot(glm1,"cyl",modelType="glm",interactive=FALSE)
+```
+
+My R Package DataMan - `sankeyPlot`
+========================================================
+```{r ,echo=2,fig.width=8,fig.height=4.5,dpi=300}
+fit <- rpart(Kyphosis ~ Age + Number + Start, data = kyphosis)
+sankeyPlot(fit)
+```
+
+
+Other interesting R things 
+========================================================
+- Reproduceble Report (RMarkDown / R Presentation)
+- Interactive Map (`leafletR` package)
+- Shiny Apps (Using `shiny` package for data mining)
+- Data visualisation
