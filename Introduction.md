@@ -21,14 +21,14 @@ Where is so called "middle part of China"?
 ========================================================
 
 <!-- Map generated in R 3.2.0 by googleVis 0.5.8 package -->
-<!-- Thu Jun 18 00:23:06 2015 -->
+<!-- Thu Jun 18 00:30:31 2015 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataMapID270c5ac75c8b () {
+function gvisDataMapID264c705444c () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -46,8 +46,8 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartMapID270c5ac75c8b() {
-var data = gvisDataMapID270c5ac75c8b();
+function drawChartMapID264c705444c() {
+var data = gvisDataMapID264c705444c();
 var options = {};
 options["showTip"] = true;
 options["showLine"] = true;
@@ -59,7 +59,7 @@ options["zoomLevel"] =      4;
 options["useMapTypeControl"] = true;
 
     var chart = new google.visualization.Map(
-    document.getElementById('MapID270c5ac75c8b')
+    document.getElementById('MapID264c705444c')
     );
     chart.draw(data,options);
     
@@ -83,9 +83,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartMapID270c5ac75c8b);
+callbacks.push(drawChartMapID264c705444c);
 })();
-function displayChartMapID270c5ac75c8b() {
+function displayChartMapID264c705444c() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -109,11 +109,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMapID270c5ac75c8b"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMapID264c705444c"></script>
  
 <!-- divChart -->
   
-<div id="MapID270c5ac75c8b" 
+<div id="MapID264c705444c" 
   style="width: 1000px; height: 600px;">
 </div>
 
@@ -132,7 +132,7 @@ left: 70%
 Chartwell  
 ========================================================
 <div align="center">
-<img src="Introduction-figure/20150607_141205.png" width=1000 height=800>
+<img src="Introduction-figure/ChartWell.jpg" width=1000 height=800>
 </div>
 
 My R Package DataMan
