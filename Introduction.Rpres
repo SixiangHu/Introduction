@@ -9,8 +9,8 @@ left: 70%
 - Name      :   Sixiang Hu (Steven) 
 - Gender    :   Male
 - From      :   Wuhan, China (middle part of China)
-- Major (UG):   Maths in Wuhan University 
-- Major (PG):   Actuarial Science in Heroit-Watt University
+- Major (UG):   Maths at Wuhan University 
+- Major (PG):   Actuarial Science at Heroit-Watt University
 
 ***
 ![wanted](Introduction-figure/me.jpg)
@@ -27,13 +27,13 @@ Where is so called "middle part of China"?
 ========================================================
 
 ```{r echo=FALSE,results='asis',tidy=FALSE}
-Wuhan <- data.frame(LatLong = c("30.35:114.17"),Tip = c("This is Wuhan in Hubei Province"))
+Wuhan <- data.frame(LatLong = c("30.65:114.27"),Tip = c("This is Wuhan in Hubei Province"))
 plot(gvisMap(Wuhan, "LatLong" , "Tip", 
        options=list(showTip=TRUE, 
                     showLine=TRUE, 
                     enableScrollWheel=TRUE,
                     mapType='terrain', 
-                    width='800px',
+                    width='1000px',
                     height= '600px',
                     zoomLevel = 4,
                     useMapTypeControl=TRUE)))
@@ -42,11 +42,11 @@ plot(gvisMap(Wuhan, "LatLong" , "Tip",
 Hobbies
 ========================================================
 left: 70%
-- Programming (C, C++, WPF, R, SAS,SQL, JavaScript, etc.)
 - Classical Music (Piano)
 - PC Games (Adventure, e.g. [Nancy Drew](https://en.wikipedia.org/wiki/Nancy_Drew))
 - Travel (e.g. National trusts, Castels, Natural Views, etc.)
-- And, of cause, R!
+- Programming (C, C++, WPF, SAS,SQL, JavaScript, etc.)
+- and, of cause, R!
 
 ***
   ![Nancy Drew](https://upload.wikimedia.org/wikipedia/en/thumb/b/bf/ND1tsotoc.JPG/220px-ND1tsotoc.JPG)
@@ -80,14 +80,6 @@ My R Package DataMan - `modelPlot`
 glm1 <- glm(formula = mpg ~ cyl + hp, family = Gamma(log), data = mtcars, weights = wt)
 modelPlot(glm1,"cyl",modelType="glm",interactive=FALSE)
 ```
-
-My R Package DataMan - `sankeyPlot`
-========================================================
-```{r ,echo=2,fig.width=8,fig.height=4.5,dpi=300}
-fit <- rpart(Kyphosis ~ Age + Number + Start, data = kyphosis)
-sankeyPlot(fit)
-```
-
 
 Other interesting R things 
 ========================================================
